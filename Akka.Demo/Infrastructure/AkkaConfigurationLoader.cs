@@ -15,7 +15,6 @@ namespace Akka.Demo.Infrastructure
                 return ConfigurationFactory.ParseString(config);
             }
 
-
             return Config.Empty;
         }
     }
