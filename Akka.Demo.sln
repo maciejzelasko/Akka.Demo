@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Demo", "Akka.Demo\Akka.Demo.csproj", "{B97D473A-7561-4F3B-B64E-4D8F00F716ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Demo", "src\Akka.Demo\Akka.Demo.csproj", "{B97D473A-7561-4F3B-B64E-4D8F00F716ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{01E14167-F941-49A4-92A8-FCB094C10519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B97D473A-7561-4F3B-B64E-4D8F00F716ED} = {01E14167-F941-49A4-92A8-FCB094C10519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E5C0A76-D0BD-4A62-8EB7-3219E1F7FADA}
