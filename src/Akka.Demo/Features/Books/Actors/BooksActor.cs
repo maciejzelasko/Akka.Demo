@@ -21,7 +21,7 @@ namespace Akka.Demo.Features.Books.Actors
             var book = new Book();
 
             await _repository.AddAsync(book);
-            Sender.Tell(book.EntityId);
+            Sender.Tell(book.Id);
         }
     }
 }

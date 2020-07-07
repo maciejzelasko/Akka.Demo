@@ -2,8 +2,10 @@
 
 namespace Akka.Demo.Features.Books
 {
-    public class Book
+    using BuildingBlocks;
+
+    public class Book : BaseEntity
     {
-        public Guid EntityId { get; set; }
+        public Guid Id { get; set; }
     }
 }
