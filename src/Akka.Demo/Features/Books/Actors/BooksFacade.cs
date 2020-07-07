@@ -4,16 +4,27 @@ using Akka.Demo.Features.Books.Commands;
 
 namespace Akka.Demo.Features.Books.Actors
 {
+    using BuildingBlocks;
+
     public interface IBooksFacade 
     {
         Task<Guid> AddBookAsync(AddBookCommand command);
     }
 
-    public class BooksFacade : IBooksFacade
+    internal sealed class BooksFacade : IBooksFacade
     {
-        public Task<Guid> AddBookAsync(AddBookCommand command)
+        private readonly IRepository<Book> _repository;
+
+        public BooksFacade(IRepository<Book> repository)
         {
-            throw new NotImplementedException();
+            this._repository = repository;
+        }
+
+        public async Task<Guid> AddBookAsync(AddBookCommand command)
+        {
+            var book = new Book(command.Name, command.Isbn);
+            await _repository.AddAsync(book);
+            return book.Id;
         }
     }
 }

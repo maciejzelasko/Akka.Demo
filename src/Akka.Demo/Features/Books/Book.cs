@@ -6,6 +6,15 @@ namespace Akka.Demo.Features.Books
 
     public class Book : BaseEntity
     {
-        public Guid Id { get; set; }
+        public Book(string name, string isbn)
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+            Isbn = isbn;
+        }
+
+        public Guid Id { get; }
+        public string Name { get; }
+        public string Isbn { get; }
     }
 }
