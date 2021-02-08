@@ -11,7 +11,7 @@ namespace Akka.Demo.Infrastructure
         {
             if (File.Exists(configFile))
             {
-                string config = File.ReadAllText(configFile);
+                var config = File.ReadAllText(configFile);
                 return ConfigurationFactory.ParseString(config);
             }
 
